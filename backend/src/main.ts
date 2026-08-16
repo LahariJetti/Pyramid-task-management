@@ -6,8 +6,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'http://localhost:3000',
-    credentials: true,
+    origin: [
+      'http://localhost:3000',
+      'https://pyramid-task-management-bnr61rj7c-pyramin-task-management.vercel.app',
+  ],
+    
   });
 
   app.useGlobalPipes(
