@@ -62,7 +62,7 @@ export default function TasksPage() {
 
   async function loadTasks() {
     try {
-      const response = await fetch("http://localhost:4000/tasks");
+      const response = await fetch("https://pyramid-task-management.onrender.com");
 
       if (!response.ok) {
         throw new Error("Failed to load tasks");
@@ -124,8 +124,8 @@ export default function TasksPage() {
 
     try {
       const url = editingTask
-        ? `http://localhost:4000/tasks/${editingTask.id}`
-        : "http://localhost:4000/tasks";
+        ? "https://pyramid-task-management.onrender.com/${editingTask.id}`"
+         :"https://pyramid-task-management.onrender.com";
 
       const method = editingTask ? "PATCH" : "POST";
 
@@ -179,7 +179,7 @@ export default function TasksPage() {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/tasks/${task.id}`,
+        `https://pyramid-task-management.onrender.com${task.id}`,
         {
           method: "DELETE",
         }
