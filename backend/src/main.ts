@@ -9,7 +9,6 @@ async function bootstrap() {
     origin: [
       'http://localhost:3000',
       'https://pyramid-task-management.vercel.app',
-      'https://pyramid-task-management-bnr61rj7c-pyramin-task-management.vercel.app',
   ],
     
   });
